@@ -1,0 +1,748 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'FFKarbidWebRegular';
+  src: url("../fonts/KarbidWeb.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'FFKarbidWebItalic';
+  src: url("../fonts/KarbidWeb-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'FFKarbidWebBold';
+  src: url("../fonts/KarbidWeb-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'FFKarbidWebBoldItalic';
+  src: url("../fonts/KarbidWeb-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb-BoldItalic.woff") format("woff");
+}
+
+/*doc
+
+---
+title: Typography
+category: Basics
+---
+
+```html_example
+
+<h1>Lupa väliaitojen uusimiseen</h1>
+<h2>Lupa väliaitojen uusimiseen</h2>
+<h3>Lupa väliaitojen uusimiseen</h3>
+<h4>Lupa väliaitojen uusimiseen</h4>
+<h5>Lupa väliaitojen uusimiseen</h5>
+<h6>Lupa väliaitojen uusimiseen</h6>
+<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+```
+
+*/
+body {
+  font-family: "FFKarbidWebRegular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  padding-bottom: 60px;
+  padding-top: 80px;
+  color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "FFKarbidWebBold", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+}
+
+h1 {
+  font-size: 41px;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 16px;
+}
+
+/*doc
+
+---
+title: Colors
+category: Basics
+---
+
+<div class="row">
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(0,51,128);"><br><br><br><br><br></div>
+    <pre class="text-center">$helsinki-blue-dark</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(0,114,198);"><br><br><br><br><br></div>
+    <pre class="text-center">$helsinki-blue-light</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(255,198,30);"><br><br><br><br><br></div>
+    <pre class="text-center">$helsinki-yellow</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(248,211,98);"><br><br><br><br><br></div>
+    <pre class="text-center">$helsinki-yellow-30</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(255,249,233);"><br><br><br><br><br></div>
+    <pre class="text-center">$helsinki-yellow-10</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(25,25,25);"><br><br><br><br><br></div>
+    <pre class="text-center">$black-90</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(128,128,128);"><br><br><br><br><br></div>
+    <pre class="text-center">$black-50</pre>
+  </div>
+
+  <div class="col-sm-3 col-xs-6">
+    <div style="background:rgb(242,242,242);"><br><br><br><br><br></div>
+    <pre class="text-center">$black-5</pre>
+  </div>
+
+</div>
+
+```none_example
+
+```
+
+*/
+a:link {
+  color: #0072c6;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0072c6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0063ad;
+  text-decoration: none;
+}
+
+a:active {
+  color: #005593;
+  text-decoration: none;
+}
+
+/*doc
+
+---
+title: Links
+category: Basics
+---
+```html_example
+
+<a href="#">Link</a>
+
+```
+
+*/
+.log-in {
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+/*doc
+
+---
+title: Navbar
+category: Components
+---
+
+Navbar should be wrapped in `<nav class="navbar navbar-default navbar-fixed-top"></nav>` tag. Because of the special nature of the navbar it does not render correctly in this example.
+
+```html_example
+
+<div class="container-fluid">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="tyolista.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Oma työlista (5)</a>
+  </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li><a href="tyolista.html"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Oma työlista</a></li>
+      <li><a href="tyolista-kasitellyt.html"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> Käsitellyt palautteet</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="index.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Kirjaudu ulos</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</div>
+
+```
+
+*/
+.navbar-default {
+  background-color: #0072c6;
+  min-height: 80px;
+  padding-top: 15px;
+}
+
+.navbar-default .navbar-brand {
+  color: #fff;
+}
+
+.navbar-default h3 {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.navbar-default .navbar-text {
+  font-size: 20px;
+}
+
+.navbar-default .navbar-toggle {
+  border-style: none;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: #0072c6;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+  border-radius: 0px;
+  width: 24px;
+  height: 3px;
+}
+
+.navbar-default .navbar-collapse {
+  border-style: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+
+.navbar-nav > li > a {
+  font-size: 20px;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  background-color: #003380;
+  color: #fff;
+}
+
+.he-separator {
+  color: #04a1d4;
+  font-size: 20px;
+}
+
+.navbar-default .navbar-text {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .navbar-text {
+    display: none;
+  }
+}
+
+div.he-message-status .col-md-12 hr, div.he-positive .col-md-12 hr, div.he-negative .col-md-12 hr, div.he-danger .col-md-12 hr {
+  margin-bottom: 10px;
+}
+
+div.he-message-status .col-md-12 button, div.he-positive .col-md-12 button, div.he-negative .col-md-12 button, div.he-danger .col-md-12 button {
+  margin-bottom: -20px;
+}
+
+.comments p span {
+  padding-top: 10px;
+}
+
+.btn-xs {
+  font-size: 17px;
+}
+
+/*doc
+
+---
+title: Panel collapsible
+category: Components
+---
+
+```html_example
+
+<div class="row">
+  <div class="col-md-12 he-message-collapse">
+    <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default he-card-bg">
+        <!-- div wrapped in <a> tag to make it clickable -->
+        <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOdottaaKommenttia" aria-expanded="true" aria-controls="collapseOdottaaKommenttia">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h5 class="panel-title">
+              <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+              Odottaa kommenttia (1)
+            </h5>
+          </div>
+        </a>
+        <div id="collapseOdottaaKommenttia" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+          <a href="luepalaute3.html">
+            <div class="panel-body he-card">
+              <div class="media">
+                <div class="media-body">
+                  <p class="he-datestamp"><b>19.04.2016</b> <span class="he-positive he-message-status pull-right">Uusia kommentteja</span></p>
+                  <h4>Heippa, Ullanlinnan Komp... </h4>
+                  <p><b>Heippa, Ullanlinnan Kompassitorille on ilmestynyt k...</b></p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+```
+
+*/
+.panel {
+  border-style: none;
+  border-radius: 0px;
+  padding-bottom: 2px;
+  box-shadow: none;
+}
+
+.panel-group {
+  margin-bottom: 0px;
+}
+
+.panel-group .panel {
+  border-radius: 0px;
+}
+
+.panel-default > .panel-heading {
+  border-radius: 0px;
+  background-color: #04a1d4;
+  border-style: none;
+}
+
+.he-datestamp {
+  color: #04a1d4;
+}
+
+.panel-title a {
+  color: #fff;
+}
+
+.panel-heading {
+  background-color: #04a1d4;
+  color: #fff;
+  padding: 15px 15px;
+  border-radius: 0px;
+}
+
+.panel-heading a:link, .panel-heading a:hover, .panel-heading a:active, .panel-heading a:visited, .panel-heading a:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.panel-heading-int-comments {
+  background-color: #f69930;
+}
+
+.panel .panel-default > a {
+  display: block;
+}
+
+.he-card-bg {
+  background-color: #ebebeb;
+}
+
+.he-card-bg .he-card {
+  background-color: #fff;
+  border-style: none;
+  margin: 10px;
+  box-shadow: 0px 1px 3px 0px rgba(128, 128, 128, 0.5);
+}
+
+.he-panel-spacer {
+  content: '&nbsp;';
+  height: 5px;
+}
+
+.message-editor {
+  margin: 20px 0 20px 0;
+  height: 34px;
+  transition: all 0.5s ease;
+  resize: none;
+}
+
+.message-editor:focus {
+  margin: 20px 0 20px 0;
+  height: 200px;
+}
+
+/*doc
+
+---
+title: Message element
+category: Components
+---
+```html_example
+
+<div class="row">
+  <div class="col-md-12 he-message-subject">
+    <div class="media-body">
+      <p class="he-datestamp">22.03.2016 klo 14.38 <span class="he-negative pull-right">Käsittely myöhässä</span></p>
+      <h4>Pysäköintipaikkoja </h4>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 he-message-sender">
+    <h5>Lähettäjä: Jussi (jussi@gmail.com)</h5>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 he-message-status">
+      <!-- New row inside the column element to make collapsible content-->
+      <div class="row collapse" id="collapseMore">
+        <div class="col-md-12">
+          <h5>Palautteen id: 2E99g221</h5>
+          <h5>Vastauksen määräaika: 01.04.2016</h5>
+          <h5>Palautteelle on annettu julkaisulupa.</h5>
+        </div>
+      </div> <!-- End row -->
+      <!-- Another row to make control for collapse button -->
+      <div class="row">
+        <div class="col-md-12">
+          <hr>
+          <button type="button" class="btn btn-default btn-xs btn-link pull-right" data-toggle="collapse" data-target="#collapseMore" aria-expanded="false" aria-controls="collapseMore"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+        </div>
+      </div> <!-- End row -->
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 he-message-content">
+    <p>Leiviskätien, Kaupintien ja Laurinniityntien kulmaan rakennettavan talon työmaan takia Lassilassa on tällä hetkellä aivan liian vähän pysäköinti-paikkoja katujen varsilla. Asukkaat eivät saa autojaan pysäköityä.</p>
+    <p>Tarvitaan tilapäisiä paikkoja lisää tai nykyisistä paikoista esim. Leiviskätiellä pitää poistaa parkkikiekko-vaatimukset työmaan ajaksi. Tällä hetkellä rakennustyömaan parakit ovat esimerkiksi AS Oy Leiviskätie 2:n vieraspaikkojen päällä eikä korvaavia pysäköintipaikkoja ole tarjottu mistään.</p>
+    <p>Jussi</p>
+  </div>
+</div>
+
+```
+
+*/
+.he-message-subject {
+  padding-top: 15px;
+  padding-bottom: 0;
+}
+
+.he-message-sender {
+  color: #04a1d4;
+}
+
+/*doc
+
+---
+title: Message status indicators
+category: Components
+---
+
+```html_example
+
+<h5 class="he-message-status">Neutral</h5>
+<h5 class="he-message-status he-positive">Positive</h5>
+<h5 class="he-message-status he-negative">Negative</h5>
+<h5 class="he-message-status he-danger">Danger</h5>
+
+```
+
+*/
+.he-message-status, .he-positive, .he-negative, .he-danger {
+  font-family: FFKarbidWebBoldItalic, 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  color: gray;
+}
+
+.he-positive {
+  color: #60b659;
+}
+
+.he-negative {
+  color: #f69930;
+}
+
+.he-danger {
+  color: #ce0057;
+}
+
+.he-message-content {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.he-message-collapse {
+  padding-left: 0;
+  padding-right: 0;
+  border: 0px;
+  border-radius: 0px;
+}
+
+/*doc
+
+---
+title: Comment block
+category: Components
+---
+Comments are contained under a comment header "Sisäiset kommentit" or other.
+
+```html_example
+
+<div class="row">
+  <div class="col-md-12 he-message-collapse">
+    <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default he-card-bg">
+        <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <div class="panel-heading panel-heading-int-comments" role="tab" id="headingTwo">
+          <h5 class="panel-title">
+              Sisäiset kommentit (2)
+          </h5>
+        </div>
+        </a>
+        <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel">
+          <div class="panel-body he-comment he-card">
+            <div class="media">
+              <div class="media-body">
+                <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Matti Meikäläinen <span class="text-muted text-right"><span class="date-separator"> – </span>26 min sitten</span></h5>
+              </div>
+              <p>Moi, mitä mieltä olet tuosta parkk Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod.</p>
+            </div>
+          </div>
+          <div class="panel-body he-comment he-card">
+            <div class="media">
+              <div class="media-body">
+                <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Hanna Raatikainen <span class="text-muted text-right"><span class="date-separator"> – </span>42 min sitten</span></h5>
+              </div>
+              <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+```
+
+*/
+.he-comment {
+  border-left: solid 2px #04a1d4;
+  margin: 15px;
+}
+
+/*doc
+
+---
+title: Sticky buttons
+category: Components
+---
+
+```html_example
+
+<div class="row">
+  <nav id="fixed-button">
+    <div id="container">
+      <a class="" role="button" href="siirra-1.html"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span> Siirrä</a>
+      <a class="" role="button" href="vastaa-1.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Vastaa</a>
+      <a class="" role="button" href="tiedoksi-1.html"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Tiedoksi</a>
+    </div>
+  </nav>
+</div>
+
+```
+
+*/
+@media (max-width: 768px) {
+  #fixed-button {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+  }
+}
+
+#container {
+  min-widht: 320px;
+  font-size: 14px;
+  line-height: 42px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#container a {
+  width: 33.333%;
+  height: 42px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #0072c6;
+  text-align: center;
+  float: left;
+}
+
+#container a:hover {
+  background-color: #0063ad;
+  transition: all 200ms;
+}
+
+#container a:active {
+  background-color: #005593;
+}
+
+#container a.disabled {
+  color: #cccccc;
+  background-color: #0081e0;
+  pointer-events: none;
+}
+
+#container a:nth-child(2) {
+  border-left: solid 2px #04a1d4;
+  border-right: solid 2px #04a1d4;
+}
+
+.anim-tiedoksi {
+  animation-name: anim-tiedoksi;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+}
+
+@keyframes anim-tiedoksi {
+  0% {
+    background-color: #fff;
+  }
+  20% {
+    background-color: #f8d362;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+
+.display-none {
+  display: none;
+}
+
+.hr {
+  border-bottom: solid 1px #e6e6e6;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.hr-nomargin {
+  border-bottom: solid 1px #e6e6e6;
+  margin: 0;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.margin-top-40 {
+  margin-top: 40px;
+}
+
+.margin-bottom-40 {
+  margin-bottom: 40px;
+}
+
+.bottom-info {
+  margin-top: 150px;
+  text-align: center;
+}
+
+figure:not(:first-child) {
+  margin-top: 10px;
+}
+
+.ui-widget-content {
+  background: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.ui-widget-content .ui-state-focus {
+  color: #fff;
+  border: none;
+  background: none;
+  background-color: #f2f2f2;
+}
+
+.ui-widget-content .ui-menu-item {
+  font-family: "FFKarbidWebRegular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-weight: normal;
+  color: #333;
+  color: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px;
+}
+
+a[aria-expanded="false"] > div > h5:after {
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjE1cHgiIGhlaWdodD0iMTBweCIgdmlld0JveD0iMCAwIDE1IDEwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCAzLjcuMiAoMjgyNzYpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPlNoYXBlPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9IjE0LjY4IDIuNjUzMzMzMzMgNy4zNDY2NjY2NyAxMCAwIDIuNjUzMzMzMzMgMi42NCAwIDcuMzQ2NjY2NjcgNC43MDY2NjY2NyAxMi4wNTMzMzMzIDAiPjwvcG9seWdvbj4KICAgIDwvZz4KPC9zdmc+) no-repeat;
+  float: right;
+  width: 15px;
+  height: 10px;
+  margin: 4px;
+  content: '';
+  transition: all 200ms ease;
+}
+
+a[aria-expanded="true"] > div > h5:after {
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjE1cHgiIGhlaWdodD0iMTBweCIgdmlld0JveD0iMCAwIDE1IDEwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCAzLjcuMiAoMjgyNzYpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPlNoYXBlPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBvbHlnb24gaWQ9IlNoYXBlIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9IjE0LjY4IDIuNjUzMzMzMzMgNy4zNDY2NjY2NyAxMCAwIDIuNjUzMzMzMzMgMi42NCAwIDcuMzQ2NjY2NjcgNC43MDY2NjY2NyAxMi4wNTMzMzMzIDAiPjwvcG9seWdvbj4KICAgIDwvZz4KPC9zdmc+) no-repeat;
+  float: right;
+  width: 15px;
+  height: 10px;
+  margin: 4px;
+  content: '';
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+  transition: all 200ms ease;
+}

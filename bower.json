@@ -1,0 +1,27 @@
+{
+  "name": "palaute-ui",
+  "version": "1.0.0",
+  "description": "Responsive feedback UI",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "bootstrap-tokenfield": "0.12.1",
+    "font-awesome": "~4.4.0",
+    "angular": "~1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "angular-resource": "^1.5.8",
+    "angular-mocks": "^1.5.8",
+    "bootstrap-autohidingnavbar": "^1.0.6"
+  }
+}
