@@ -41,7 +41,8 @@
 1. Install Node.js
 2. Go to project root and issue the command: 'npm install'
 3. Install bower by issuing the command: 'npm install -g bower'
-4. Download json-server and start it up by issuing the command: 'json-server --watch db.json -p 1234' (db.json is the data file and 1234 is the port)
-5. In the project root foler issue the command: 'gulp watch'
-6. Application should appear in a browser window
+4. In the project root folder issue the command: 'bower install' (install third party web libraries)
+5. Download json-server and start it up by issuing the command: 'json-server --watch db.json -p 1234' (db.json is the data file and 1234 is the port)
+6. In the project root foler issue the command: 'gulp watch'
+7. Application should appear in a browser window
 
