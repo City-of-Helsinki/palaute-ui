@@ -5,13 +5,13 @@ angular.module('palauteUiApp', ['ui.router', 'ngResource'])
         $stateProvider
 
             .state('app', {
-                url:'/',
+                url:'/user/:userid',
                 views: {
                     'header': {
                         templateUrl : 'views/header.html',
                     },
                     'content': {
-                        templateUrl : 'views/home.html',
+                        templateUrl : 'views/worklist.html',
                         controller  : 'IndexController'
                     },
                     'footer': {
@@ -22,7 +22,7 @@ angular.module('palauteUiApp', ['ui.router', 'ngResource'])
             })
 
             .state('app.handled', {
-                url:'/handled',
+                url:'/user/:userid/handled',
                 views: {
                     'content@': {
                         templateUrl : 'views/handled.html',
@@ -32,15 +32,15 @@ angular.module('palauteUiApp', ['ui.router', 'ngResource'])
             })
 
             .state('app.feedbackdetails', {
-                url: '/feedback/:id',
+                url: '/feedback/:feedbackid',
                 views: {
                     'content@': {
-                        templateUrl : 'views/dishdetail.html',
+                        templateUrl : 'views/feedback.html',
                         controller  : 'FeedbackDetailController'
                    }
                 }
             });
     
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/user/1');
     })
 ;

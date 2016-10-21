@@ -2,20 +2,52 @@
 
 angular.module('palauteUiApp')
 
-	        .controller('IndexController', ['$scope', 'feedbackFactory', function($scope, feedbackFactory){
+    .controller('IndexController', ['$scope', '$stateParams', 'feedbackFactory', function($scope, $stateParams, feedbackFactory){
 
-	        	feedbackFactory.getFeedbacks().get({id:1})
-	        		.$promise.then(
-						function(response){
-	                        
-	                        $scope.feedbacks = response.feedbacks;
+    	console.log("User : "+$stateParams.userid);
 
-                    	},
-                    	function(response) {
-                    		console.log("Error on feedbacks: "+response.status + " " + response.statusText);
-                        	$scope.feedbackmessage = "Error on feedbacks: "+response.status + " " + response.statusText;
+    	feedbackFactory.getFeedbacks().get({id:$stateParams.userid})
+    		.$promise.then(
+				function(response){
+                    
+                    $scope.feedbacks = response.feedbacks;
+
+            	},
+            	function(response) {
+            		console.log("Error on feedbacks: "+response.status + " " + response.statusText);
+                	$scope.feedbackmessage = "Error on feedbacks: "+response.status + " " + response.statusText;
+            	}
+    		);
+	}])
+
+	.controller('FeedbackDetailController', ['$scope', '$stateParams', 'feedbackFactory', function($scope, $stateParams, feedbackFactory){
+
+    	feedbackFactory.getFeedbacks().get({id:$stateParams.userid})
+    		.$promise.then(
+				function(response){
+                    for(i=0; i<response.feedbacks.length; i++) {
+                    	var feedback = response.feedbacks[i];
+
+                    	console.log("Comparing "+feedback.id+" with "+$stateParams.feedbackid);
+
+                    	if( feedback.id == Number($stateParams.feedbackid)) {
+                    		console.log("Feedback located: "+feedback.description);
+                    		$scope.feedback = feedback;
+                    		break;
                     	}
-	        		);
-			}])
+                    }
+                    if($scope.feedback) {
+                    	// ok
+                    } else {
+                    	console.log("Feedback not found!");
+                    	$scope.feedback = {};
+                    }
+            	},
+            	function(response) {
+            		console.log("Error on feedbacks: "+response.status + " " + response.statusText);
+                	$scope.feedbackmessage = "Error on feedbacks: "+response.status + " " + response.statusText;
+            	}
+    		);
+	}])
 
 ;

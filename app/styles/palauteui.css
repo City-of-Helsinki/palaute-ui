@@ -19,6 +19,9 @@
   src: url("../fonts/KarbidWeb-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/KarbidWeb-BoldItalic.woff") format("woff");
 }
 
+.white-space-pre {
+    white-space: pre-wrap;
+}
 /*doc
 
 ---
