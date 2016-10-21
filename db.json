@@ -8,12 +8,28 @@
 				{
 					"id" : 1001,
 					"date" : "24.06.2016",
-					"title" : "Palautteen otsikko / cat 1",
+					"title" : "Pysäköintipaikkoja",
 					"short_description" : "Palautteen lyhyt kuvaus / cat 1",
 					"description" : "Leiviskätien, Kaupintien ja Laurinniityntien kulmaan rakennettavan talon työmaan takia Lassilassa on tällä hetkellä aivan liian vähän pysäköinti-paikkoja katujen varsilla. Asukkaat eivät saa autojaan pysäköityä.\n\nTarvitaan tilapäisiä paikkoja lisää tai nykyisistä paikoista esim. Leiviskätiellä pitää poistaa parkkikiekko-vaatimukset työmaan ajaksi. Tällä hetkellä rakennustyömaan parakit ovat esimerkiksi AS Oy Leiviskätie 2:n vieraspaikkojen päällä eikä korvaavia pysäköintipaikkoja ole tarjottu mistään.\n\nJussi",
 					"status" : "Uusi",
 					"alert_status" : "Myöhästymässä",
-					"category" : 1
+					"category" : 1,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 1002,
@@ -22,7 +38,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 2",
 					"description" : "",
 					"status" : "Uusia kommentteja",
-					"category" : 2
+					"category" : 2,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 1003,
@@ -32,7 +64,22 @@
 					"description" : "",
 					"status" : "Infottu",
 					"category" : 3,
-					"classified" : true
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 1004,
@@ -41,7 +88,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 1",
 					"description" : "",
 					"status" : "Uusi",
-					"category" : 1
+					"category" : 1,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 1005,
@@ -50,7 +113,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 2",
 					"description" : "",
 					"status" : "Uusia kommentteja",
-					"category" : 2
+					"category" : 2,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 1006,
@@ -60,7 +139,23 @@
 					"description" : "",
 					"status" : "Infottu",
 					"category" : 3,
-					"classified" : false
+					"classified" : false,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 1007,
@@ -69,7 +164,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 1",
 					"description" : "",
 					"status" : "Vastaus pyydetty",
-					"category" : 1
+					"category" : 1,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 1008,
@@ -78,7 +189,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 2",
 					"description" : "",
 					"status" : "Uusia kommentteja",
-					"category" : 2
+					"category" : 2,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				}
 
 			]
@@ -94,7 +221,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 1",
 					"description" : "",
 					"status" : "Uusi",
-					"category" : 1
+					"category" : 1,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 2002,
@@ -103,7 +246,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 2",
 					"description" : "",
 					"status" : "Uusia kommentteja",
-					"category" : 2
+					"category" : 2,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 2003,
@@ -113,7 +272,23 @@
 					"description" : "",
 					"status" : "Infottu",
 					"category" : 3,
-					"classified" : true
+					"classified" : true,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 2004,
@@ -122,7 +297,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 1",
 					"description" : "",
 					"status" : "Uusi",
-					"category" : 1
+					"category" : 1,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 2005,
@@ -131,7 +322,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 2",
 					"description" : "",
 					"status" : "Uusia kommentteja",
-					"category" : 2
+					"category" : 2,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 2006,
@@ -141,7 +348,23 @@
 					"description" : "",
 					"status" : "Infottu",
 					"category" : 3,
-					"classified" : false
+					"classified" : false,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 2007,
@@ -150,7 +373,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 1",
 					"description" : "",
 					"status" : "Vastaus pyydetty",
-					"category" : 1
+					"category" : 1,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 2008,
@@ -159,7 +398,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 2",
 					"description" : "",
 					"status" : "Uusia kommentteja",
-					"category" : 2
+					"category" : 2,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				}
 
 			]
@@ -175,7 +430,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 1",
 					"description" : "",
 					"status" : "Uusi",
-					"category" : 1
+					"category" : 1,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 3002,
@@ -184,7 +455,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 2",
 					"description" : "",
 					"status" : "Uusia kommentteja",
-					"category" : 2
+					"category" : 2,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 3003,
@@ -194,7 +481,23 @@
 					"description" : "",
 					"status" : "Infottu",
 					"category" : 3,
-					"classified" : true
+					"classified" : true,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 3004,
@@ -203,7 +506,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 1",
 					"description" : "",
 					"status" : "Uusi",
-					"category" : 1
+					"category" : 1,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 3005,
@@ -212,7 +531,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 2",
 					"description" : "",
 					"status" : "Uusia kommentteja",
-					"category" : 2
+					"category" : 2,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 3006,
@@ -222,7 +557,23 @@
 					"description" : "",
 					"status" : "Infottu",
 					"category" : 3,
-					"classified" : false
+					"classified" : false,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 3007,
@@ -231,7 +582,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 1",
 					"description" : "",
 					"status" : "Vastaus pyydetty",
-					"category" : 1
+					"category" : 1,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				},
 				{
 					"id" : 3008,
@@ -240,7 +607,23 @@
 					"short_description" : "Palautteen lyhyt kuvaus / cat 2",
 					"description" : "",
 					"status" : "Uusia kommentteja",
-					"category" : 2
+					"category" : 2,
+					"location" : {
+						"address" : "Leiviskätie 2",
+						"image" : "images/leiviskatie2.png",
+						"alt" : "Leiviskätie 2"
+					},
+					"image" : {
+						"url" : "images/tyomaa.jpg",
+						"alt" : "tyomaa.jpg",
+						"caption" : "Työmaa"
+					},
+					"submission" : {
+						"name" : "Jussi",
+						"email" : "jussi@gmail.com"
+					},
+					"deadline" : "01.04.2016",
+					"publishAllowed" : true
 				}
 
 			]

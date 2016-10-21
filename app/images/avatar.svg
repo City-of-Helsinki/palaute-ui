@@ -1,0 +1,14 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105 150">
+  <defs>
+    <style>
+      .cls-1{fill:#fff;}.cls-2{fill:#231f20;}
+    </style>
+  </defs>
+  <title>
+    palautesysteemi
+  </title>
+  <path class="cls-1" d="M3.5 146.5v-21.14a49 49 0 0 1 98 0v21.14h-98z"/>
+  <path class="cls-2" d="M52.5 79.86a45.55 45.55 0 0 1 45.5 45.5V143H7v-17.64a45.55 45.55 0 0 1 45.5-45.5m0-7A52.5 52.5 0 0 0 0 125.36V150h105v-24.64a52.5 52.5 0 0 0-52.5-52.5z"/>
+  <path class="cls-1" d="M52.5 86.5A41.5 41.5 0 1 1 94 45a41.55 41.55 0 0 1-41.5 41.5z"/>
+  <path class="cls-2" d="M52.5 7a38 38 0 1 1-38 38 38 38 0 0 1 38-38m0-7a45 45 0 1 0 45 45 45 45 0 0 0-45-45z"/>
+</svg>

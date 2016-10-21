@@ -28,10 +28,7 @@ angular.module('palauteUiApp')
                     for(i=0; i<response.feedbacks.length; i++) {
                     	var feedback = response.feedbacks[i];
 
-                    	console.log("Comparing "+feedback.id+" with "+$stateParams.feedbackid);
-
                     	if( feedback.id == Number($stateParams.feedbackid)) {
-                    		console.log("Feedback located: "+feedback.description);
                     		$scope.feedback = feedback;
                     		break;
                     	}
