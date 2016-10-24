@@ -21,7 +21,8 @@
           <div class="col-md-12">
             <h5>Palautteen id: {{feedback.id}}</h5>
             <h5>Vastauksen määräaika: {{feedback.deadline}}</h5>
-            <h5>Palautteelle on annettu julkaisulupa.</h5>
+            <h5 ng-if="feedback.publishAllowed == true">Palautteelle on annettu julkaisulupa.</h5>
+            <h5 ng-if="feedback.publishAllowed == false">Palautteelle ei ole annettu julkaisulupaa.</h5>
           </div>
         </div>
         <!-- Another row to make control for collapse button -->
@@ -76,18 +77,48 @@
             </div>
           </a>
           <div id="collapseComments" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-            <div class="panel-body">
+            
+
+            <div class="panel-body" ng-if="feedbackHasComments() == false">
               <span class="text-muted">Ei kommentteja! <a class="btn btn-default btn-sm" href="kutsu-1.html" role="button">Kutsu keskustelijoita</a></span>
             </div>
+
+            <div class="panel-body he-comment he-card" ng-if="feedbackHasComments()" ng-repeat="comment in feedback.comments">
+                <div class="media">
+                  <div class="media-body">
+                <h5 class="media-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{comment.author}} <span class="text-muted text-right"><span class="date-separator"> – </span>{{comment.date | date: "dd.MM.yyyy HH:mm:ss"}}</span></h5>
+                  </div>
+                  <p>{{comment.text}}</p>
+                </div>
+              </div>
+
+
+
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-12">
-                  <form action="#">
+                  
+                  <!--<form action="#">-->
+                  <form class="form-horizontal" name="commentForm" ng-submit="submitComment()" novalidate>
+
+                    <input 
+                      type="text" 
+                      class="form-control" 
+                      id="comment"
+                      name="comment" 
+                      placeholder="Kirjoita sisäinen kommenttisi tähän"
+                      ng-model="myComment.text" 
+                      required>
+                  <!--
                     <textarea class="message-editor form-control scale" rows="1" placeholder="Kirjoita sisäinen kommenttisi tähän"></textarea>
+                    -->
+
                     <div class="form-group pull-right">
-                      <button class="btn btn-primary" type="button" name="button">
+                      <!--<button class="btn btn-primary" type="button" name="button">
                         Lähetä kommentti
-                      </button>
+                      </button>-->
+                       <button type="submit" class="btn btn-primary">Lähetä kommentti</button>
+
                     </div>
                   </form>
                 </div>

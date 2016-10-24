@@ -29,7 +29,8 @@
 						"email" : "jussi@gmail.com"
 					},
 					"deadline" : "01.04.2016",
-					"publishAllowed" : true
+					"publishAllowed" : true,
+					"comments" : []
 				},
 				{
 					"id" : 1002,
@@ -54,7 +55,8 @@
 						"email" : "jussi@gmail.com"
 					},
 					"deadline" : "01.04.2016",
-					"publishAllowed" : true
+					"publishAllowed" : true,
+					"comments" : []
 				},
 				{
 					"id" : 1003,
@@ -79,7 +81,8 @@
 						"email" : "jussi@gmail.com"
 					},
 					"deadline" : "01.04.2016",
-					"publishAllowed" : true
+					"publishAllowed" : true,
+					"comments" : []
 				},
 				{
 					"id" : 1004,
@@ -104,7 +107,8 @@
 						"email" : "jussi@gmail.com"
 					},
 					"deadline" : "01.04.2016",
-					"publishAllowed" : true
+					"publishAllowed" : true,
+					"comments" : []
 				},
 				{
 					"id" : 1005,
@@ -129,7 +133,8 @@
 						"email" : "jussi@gmail.com"
 					},
 					"deadline" : "01.04.2016",
-					"publishAllowed" : true
+					"publishAllowed" : true,
+					"comments" : []
 				},
 				{
 					"id" : 1006,
@@ -155,7 +160,8 @@
 						"email" : "jussi@gmail.com"
 					},
 					"deadline" : "01.04.2016",
-					"publishAllowed" : true
+					"publishAllowed" : true,
+					"comments" : []
 				},
 				{
 					"id" : 1007,
@@ -180,7 +186,8 @@
 						"email" : "jussi@gmail.com"
 					},
 					"deadline" : "01.04.2016",
-					"publishAllowed" : true
+					"publishAllowed" : true,
+					"comments" : []
 				},
 				{
 					"id" : 1008,
@@ -205,7 +212,8 @@
 						"email" : "jussi@gmail.com"
 					},
 					"deadline" : "01.04.2016",
-					"publishAllowed" : true
+					"publishAllowed" : true,
+					"comments" : []
 				}
 
 			]

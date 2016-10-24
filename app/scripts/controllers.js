@@ -22,6 +22,9 @@ angular.module('palauteUiApp')
 
 	.controller('FeedbackDetailController', ['$scope', '$stateParams', 'feedbackFactory', function($scope, $stateParams, feedbackFactory){
 
+        $scope.myComment = {};
+        $scope.commentsExist = false;
+
     	feedbackFactory.getFeedbacks().get({id:$stateParams.userid})
     		.$promise.then(
 				function(response){
@@ -30,6 +33,9 @@ angular.module('palauteUiApp')
 
                     	if( feedback.id == Number($stateParams.feedbackid)) {
                     		$scope.feedback = feedback;
+                            if( feedback.comments && feedback.comments.length > 0 ) {
+                                $scope.commentsExist = true;
+                            }
                     		break;
                     	}
                     }
@@ -45,6 +51,25 @@ angular.module('palauteUiApp')
                 	$scope.feedbackmessage = "Error on feedbacks: "+response.status + " " + response.statusText;
             	}
     		);
+
+        $scope.submitComment = function() {
+
+            var inputComment = {
+                date : new Date().toISOString(),
+                author : "Juha",
+                text : $scope.myComment.text
+            };
+
+
+            $scope.feedback.comments.push( inputComment );
+
+            $scope.myComment = "";
+        }
+
+        $scope.feedbackHasComments = function() {
+            return $scope.feedback && $scope.feedback.comments && $scope.feedback.comments.length > 0;
+        }
+
 	}])
 
 ;
