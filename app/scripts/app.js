@@ -25,7 +25,7 @@ angular.module('palauteUiApp', ['ui.router', 'ngResource'])
                 url:'/handled',
                 views: {
                     'content@': {
-                        templateUrl : 'views/handled.html',
+                        templateUrl : 'views/worklist-handled.html',
                         controller  : 'HandledController'                  
                     }
                 }

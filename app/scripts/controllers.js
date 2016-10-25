@@ -4,6 +4,8 @@ angular.module('palauteUiApp')
 
     .controller('IndexController', ['$scope', '$stateParams', 'feedbackFactory', function($scope, $stateParams, feedbackFactory){
 
+        // TODO: Provide real dynamic input params
+
     	feedbackFactory.getFeedbacks().get({id:$stateParams.userid})
     		.$promise.then(
 				function(response){
@@ -18,6 +20,23 @@ angular.module('palauteUiApp')
     		);
 	}])
 
+    .controller('HandledController', ['$scope', '$stateParams', 'feedbackFactory', function($scope, $stateParams, feedbackFactory){
+
+        // TODO: Provide real dynamic input params
+        
+        feedbackFactory.getFeedbacks().get({id:$stateParams.userid})
+            .$promise.then(
+                function(response){
+                    
+                    $scope.feedbacks = response.feedbacks;
+
+                },
+                function(response) {
+                    console.log("Error on feedbacks: "+response.status + " " + response.statusText);
+                    $scope.feedbackmessage = "Error on feedbacks: "+response.status + " " + response.statusText;
+                }
+            );
+    }])
 
 	.controller('FeedbackDetailController', ['$scope', '$rootScope', '$stateParams', 'feedbackFactory', '$state', function($scope, $rootScope, $stateParams, feedbackFactory, $state){
 
@@ -124,7 +143,7 @@ angular.module('palauteUiApp')
 
             console.log("Send feedback as info");
             console.log($scope.inform);
-            
+
             $scope.inform = {};
             $state.go('app.feedbackdetails');
         }
