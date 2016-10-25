@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 he-message-subject">
+        <div class="media-body">
+          <p class="he-datestamp">{{feedback.date | date: "dd.MM.yyyy HH:mm:ss"}} <span class="he-negative he-message-status pull-right">{{feedback.status}}</span></p>
+          <h4>{{feedback.title}}a </h4>
+        </div>
+      </div>
+    </div>
+    <!-- text editor -->
+    <div class="row">
+      <div class="col-md-12">
+        <form ng-submit="answerFeedback()">
+          <textarea class="message-editor form-control scale" rows="6" placeholder="Kirjoita vastauksesi tähän" ng-model="answer.comment"></textarea>
+          <div class="form-group pull-right">
+            <button class="btn btn-default" type="button" name="button">
+              Tallenna luonnoksena
+            </button>
+            <button class="btn btn-default" type="button" name="button">
+              Hylkää luonnos
+            </button>
+            <button class="btn btn-primary" type="submit" name="button">
+              Jatka
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

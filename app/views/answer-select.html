@@ -1,0 +1,35 @@
+<div class="container">
+      <div class="row">
+        <div class="col-md-12 he-message-subject">
+          <div class="media-body">
+            <p class="he-datestamp">22.03.2016 klo 14.38 <span class="he-negative he-message-status pull-right">Myöhästymässä</span></p>
+            <h4>Pysäköintipaikkoja </h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+      </div>
+      <div class="row  margin-top-20 margin-bottom-20">
+        <div class="col-md-12 he-message-content">
+          <h4>Vastaa palautteeseen</h4>
+          <p>Vastaus lähetetään palautteen antajan sähköpostiosoitteeseen. Palaute ja siihen antamasi vastaus voidaan julkaista hel.fi:n palaute-sivulla.</p>
+          <div class="form-group pull-right">
+            <button ng-click="sendAnswer()" class="btn btn-primary" type="button" name="button">
+              Lähetä vastaus
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row margin-top-20">
+        <div class="col-md-12 he-message-content">
+          <h4>Vastaa palautteeseen välivastauksella</h4>
+          <p>Välivastaus ei muuta käsittelyn tilaa käsitellyksi, vaan se pysyy tilassa “Odottaa vastausta”, kunnes lopullinen vastaus on annettu.</p>
+          {{answer.comment}}
+          <div class="form-group pull-right">
+            <button ng-click="sendIntermediateAnswer()" class="btn btn-primary" type="button" name="button">
+              Lähetä välivastaus
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
