@@ -26,6 +26,7 @@ angular.module('palauteUiApp')
         $scope.myComment = {};
         $scope.transfer = {};
         $scope.answer = {};
+        $scope.inform = {};
 
     	feedbackFactory.getFeedbacks().get({id:$stateParams.userid})
     		.$promise.then(
@@ -111,11 +112,20 @@ angular.module('palauteUiApp')
         $scope.sendIntermediateAnswer = function() {
 
             // TODO: Store intermediate answer to backend
-            
+
             console.log("Send intermediate answer");
             console.log($rootScope.answer);
             $rootScope.answer = {};
             $scope.answer = {};
+            $state.go('app.feedbackdetails');
+        }
+
+        $scope.sendFeedbackInform = function() {
+
+            console.log("Send feedback as info");
+            console.log($scope.inform);
+            
+            $scope.inform = {};
             $state.go('app.feedbackdetails');
         }
 
