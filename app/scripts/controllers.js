@@ -2,10 +2,12 @@
 
 angular.module('palauteUiApp')
 
-    .controller('IndexController', ['$scope', '$stateParams', 'feedbackFactory', function($scope, $stateParams, feedbackFactory){
+    .controller('IndexController', ['$scope', '$rootScope', '$stateParams', 'feedbackFactory', function($scope, $rootScope, $stateParams, feedbackFactory){
 
         // TODO: Provide real dynamic input params
         // TODO: Use actual backend for data retrieval for a feedback list
+        
+        $rootScope.tab = 1;
 
     	feedbackFactory.getFeedbacks().get({id:$stateParams.userid})
     		.$promise.then(
@@ -19,11 +21,26 @@ angular.module('palauteUiApp')
                 	$scope.feedbackmessage = "Error on feedbacks: "+response.status + " " + response.statusText;
             	}
     		);
+
+        // If navbar is changed to tabbed navigation, rootScope might not be required 
+        // and the functionality of IndexController and HandledController could be fused into a single 
+        // controller
+
+        $rootScope.select = function(selected) {
+            $rootScope.tab = selected;
+        }
+
+        $rootScope.isSelected = function(checkTab) {
+            return ($rootScope.tab === checkTab);
+        }
+
 	}])
 
-    .controller('HandledController', ['$scope', '$stateParams', 'feedbackFactory', function($scope, $stateParams, feedbackFactory){
+    .controller('HandledController', ['$scope', '$rootScope', '$stateParams', 'feedbackFactory', function($scope, $rootScope, $stateParams, feedbackFactory){
 
         // TODO: Provide real dynamic input params
+
+        $rootScope.tab = 2;
 
         feedbackFactory.getFeedbacks().get({id:$stateParams.userid})
             .$promise.then(
