@@ -212,6 +212,7 @@ Navbar should be wrapped in `<nav class="navbar navbar-default navbar-fixed-top"
 */
 .navbar-default {
   background-color: #0072c6;
+  background: #0072c6;
   min-height: 80px;
   padding-top: 15px;
 }
@@ -235,10 +236,12 @@ Navbar should be wrapped in `<nav class="navbar navbar-default navbar-fixed-top"
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
   background-color: #0072c6;
+  background: #0072c6;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #fff;
+  background: #fff;
   border-radius: 0px;
   width: 24px;
   height: 3px;
@@ -258,6 +261,7 @@ Navbar should be wrapped in `<nav class="navbar navbar-default navbar-fixed-top"
 
 .navbar-default .navbar-nav > .active > a {
   background-color: #003380;
+  background: #003380;
   color: #fff;
 }
 
@@ -749,3 +753,5 @@ a[aria-expanded="true"] > div > h5:after {
       transform: rotate(180deg);
   transition: all 200ms ease;
 }
+
+
