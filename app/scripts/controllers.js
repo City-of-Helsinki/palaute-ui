@@ -5,6 +5,7 @@ angular.module('palauteUiApp')
     .controller('IndexController', ['$scope', '$stateParams', 'feedbackFactory', function($scope, $stateParams, feedbackFactory){
 
         // TODO: Provide real dynamic input params
+        // TODO: Use actual backend for data retrieval for a feedback list
 
     	feedbackFactory.getFeedbacks().get({id:$stateParams.userid})
     		.$promise.then(
@@ -23,7 +24,7 @@ angular.module('palauteUiApp')
     .controller('HandledController', ['$scope', '$stateParams', 'feedbackFactory', function($scope, $stateParams, feedbackFactory){
 
         // TODO: Provide real dynamic input params
-        
+
         feedbackFactory.getFeedbacks().get({id:$stateParams.userid})
             .$promise.then(
                 function(response){
@@ -40,12 +41,12 @@ angular.module('palauteUiApp')
 
 	.controller('FeedbackDetailController', ['$scope', '$rootScope', '$stateParams', 'feedbackFactory', '$state', function($scope, $rootScope, $stateParams, feedbackFactory, $state){
 
-        console.log("Initializing FeedbackDetailController");
-
         $scope.myComment = {};
         $scope.transfer = {};
         $scope.answer = {};
         $scope.inform = {};
+
+        // TODO: Use the actual backend for data retrieval for a single feedback
 
     	feedbackFactory.getFeedbacks().get({id:$stateParams.userid})
     		.$promise.then(
@@ -140,6 +141,8 @@ angular.module('palauteUiApp')
         }
 
         $scope.sendFeedbackInform = function() {
+
+            // TODO: Use backend for feedback informing
 
             console.log("Send feedback as info");
             console.log($scope.inform);
