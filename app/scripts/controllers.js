@@ -1,18 +1,36 @@
 'use strict';
 
+/*
+Currently there are 3 controller components
+1. IndexController, used for listing feedbacks in the entry page
+2. HandledController, used for listing feedbacks in the 'handled' view
+3. FeedbackDetailController, used for displaying and managing a single feedback
+
+Still missing:
+1. LoginController, used for providing login/logout functionality
+
+$scope and $rootScope are visibility planes on which functions and variables can be stored.
+1. The $scope refers to the DOM elements defined for the current controller (see scripts/app.js for definitions)
+2. The $rootScope is the parent scope of all controller $scope definitions (shared)
+*/
+
 angular.module('palauteUiApp')
 
-    .controller('IndexController', ['$scope', '$rootScope', '$stateParams', 'feedbackFactory', function($scope, $rootScope, $stateParams, feedbackFactory){
+    .controller('IndexController', ['$scope', '$rootScope', '$stateParams', 'feedbackFactory', 
+      function($scope, $rootScope, $stateParams, feedbackFactory){
 
         // TODO: Provide real dynamic input params
         // TODO: Use actual backend for data retrieval for a feedback list
         
+        // Shared state used to enable tab selection using more than one controller
         $rootScope.tab = 1;
 
+        // Check scripts/services.js for feedbackFactory implementation
     	feedbackFactory.getFeedbacks().get({id:$stateParams.userid})
     		.$promise.then(
 				function(response){
                     
+                    // The list of feedbacks is 'feedbacks' array inside the returned json ('response')
                     $scope.feedbacks = response.feedbacks;
 
             	},
@@ -24,24 +42,29 @@ angular.module('palauteUiApp')
 
         // If navbar is changed to tabbed navigation, rootScope might not be required 
         // and the functionality of IndexController and HandledController could be fused into a single 
-        // controller
+        // controller. Check views/header.html for provided implementation.
 
+        // Shared state used to enable tab selection using more than one controller
         $rootScope.select = function(selected) {
             $rootScope.tab = selected;
         }
 
+        // Shared state used to enable tab selection using more than one controller
         $rootScope.isSelected = function(checkTab) {
             return ($rootScope.tab === checkTab);
         }
 
 	}])
 
-    .controller('HandledController', ['$scope', '$rootScope', '$stateParams', 'feedbackFactory', function($scope, $rootScope, $stateParams, feedbackFactory){
+    .controller('HandledController', ['$scope', '$rootScope', '$stateParams', 'feedbackFactory', 
+      function($scope, $rootScope, $stateParams, feedbackFactory){
 
         // TODO: Provide real dynamic input params
 
+        // Shared state used to enable tab selection using more than one controller
         $rootScope.tab = 2;
 
+        // Check scripts/services.js for feedbackFactory implementation
         feedbackFactory.getFeedbacks().get({id:$stateParams.userid})
             .$promise.then(
                 function(response){
@@ -56,7 +79,8 @@ angular.module('palauteUiApp')
             );
     }])
 
-	.controller('FeedbackDetailController', ['$scope', '$rootScope', '$stateParams', 'feedbackFactory', '$state', function($scope, $rootScope, $stateParams, feedbackFactory, $state){
+	.controller('FeedbackDetailController', ['$scope', '$rootScope', '$stateParams', 'feedbackFactory', '$state', 
+      function($scope, $rootScope, $stateParams, feedbackFactory, $state){
 
         $scope.myComment = {};
         $scope.transfer = {};
@@ -65,6 +89,7 @@ angular.module('palauteUiApp')
 
         // TODO: Use the actual backend for data retrieval for a single feedback
 
+        // Check scripts/services.js for feedbackFactory implementation
     	feedbackFactory.getFeedbacks().get({id:$stateParams.userid})
     		.$promise.then(
 				function(response){
