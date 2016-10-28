@@ -1,4 +1,9 @@
-'use strict';
+//'use strict';
+
+// OAuth2 can be implemented using: https://github.com/oauthjs/angular-oauth2
+
+(function(){
+    "use strict";
 
 angular.module('palauteUiApp', ['ui.router', 'ngResource'])
 .config(function($stateProvider, $urlRouterProvider) {
@@ -86,3 +91,4 @@ angular.module('palauteUiApp', ['ui.router', 'ngResource'])
         $urlRouterProvider.otherwise('/user/1');
     })
 ;
+})();

@@ -1,5 +1,7 @@
-'use strict';
-
+/* jshint node: true */
+//'use strict';
+(function(){
+    "use strict";
 /*
 Currently there are 3 controller components
 1. IndexController, used for listing feedbacks in the entry page
@@ -47,12 +49,12 @@ angular.module('palauteUiApp')
         // Shared state used to enable tab selection using more than one controller
         $rootScope.select = function(selected) {
             $rootScope.tab = selected;
-        }
+        };
 
         // Shared state used to enable tab selection using more than one controller
         $rootScope.isSelected = function(checkTab) {
             return ($rootScope.tab === checkTab);
-        }
+        };
 
 	}])
 
@@ -93,7 +95,7 @@ angular.module('palauteUiApp')
     	feedbackFactory.getFeedbacks().get({id:$stateParams.userid})
     		.$promise.then(
 				function(response){
-                    for(i=0; i<response.feedbacks.length; i++) {
+                    for(var i=0; i<response.feedbacks.length; i++) {
                     	var feedback = response.feedbacks[i];
 
                     	if( feedback.id == Number($stateParams.feedbackid)) {
@@ -130,11 +132,11 @@ angular.module('palauteUiApp')
             // TODO: Save comment to database
 
             $scope.myComment = {};
-        }
+        };
 
         $scope.feedbackHasComments = function() {
             return $scope.feedback && $scope.feedback.comments && $scope.feedback.comments.length > 0;
-        }
+        };
 
         $scope.transferFeedback = function() {
             
@@ -148,7 +150,7 @@ angular.module('palauteUiApp')
             $state.go('app.feedbackdetails');
 
             $scope.transfer = {};
-        }
+        };
 
         $scope.answerFeedback = function() {
 
@@ -158,7 +160,7 @@ angular.module('palauteUiApp')
             $rootScope.answer = $scope.answer;
             
             $state.go('app.feedbackdetails.answer.select');
-        }
+        };
 
         $scope.sendAnswer = function() {
 
@@ -169,7 +171,7 @@ angular.module('palauteUiApp')
             $rootScope.answer = {};
             $scope.answer = {};
             $state.go('app.feedbackdetails');
-        }
+        };
 
         $scope.sendIntermediateAnswer = function() {
 
@@ -180,7 +182,7 @@ angular.module('palauteUiApp')
             $rootScope.answer = {};
             $scope.answer = {};
             $state.go('app.feedbackdetails');
-        }
+        };
 
         $scope.sendFeedbackInform = function() {
 
@@ -191,8 +193,9 @@ angular.module('palauteUiApp')
 
             $scope.inform = {};
             $state.go('app.feedbackdetails');
-        }
+        };
 
 	}])
 
 ;
+})();
