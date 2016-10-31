@@ -1,9 +1,11 @@
-//'use strict';
-
 // OAuth2 can be implemented using: https://github.com/oauthjs/angular-oauth2
 
 (function(){
     "use strict";
+
+// Every time a state is loaded via ui-sref, all relating components are re-initialized.
+// In other words, controller state is not persisted between state loads event if the
+// same controller is used in multiple states
 
 angular.module('palauteUiApp', ['ui.router', 'ngResource'])
 .config(function($stateProvider, $urlRouterProvider) {
@@ -88,6 +90,8 @@ angular.module('palauteUiApp', ['ui.router', 'ngResource'])
 
             ;
     
+        // TODO: Default to something reasonable
+
         $urlRouterProvider.otherwise('/user/1');
     })
 ;

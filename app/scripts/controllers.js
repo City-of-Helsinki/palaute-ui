@@ -1,5 +1,5 @@
 /* jshint node: true */
-//'use strict';
+
 (function(){
     "use strict";
 /*
@@ -94,7 +94,14 @@ angular.module('palauteUiApp')
         // Check scripts/services.js for feedbackFactory implementation
     	feedbackFactory.getFeedbacks().get({id:$stateParams.userid})
     		.$promise.then(
+
+                // Function executed when the http request returns succesfully
 				function(response){
+
+                    // TODO: Use an http endpoint that returns a single feedback
+                    // This loop is just a workaround for the development data format 
+                    // located in db.json
+
                     for(var i=0; i<response.feedbacks.length; i++) {
                     	var feedback = response.feedbacks[i];
 
@@ -110,12 +117,14 @@ angular.module('palauteUiApp')
                     	$scope.feedback = {};
                     }
             	},
+                // Function executed when the http request fails
             	function(response) {
             		console.log("Error on feedbacks: "+response.status + " " + response.statusText);
                 	$scope.feedbackmessage = "Error on feedbacks: "+response.status + " " + response.statusText;
             	}
     		);
 
+        // Used from views/feedback.html
         $scope.submitComment = function() {
 
             // TODO: Use logged in user name
@@ -134,24 +143,25 @@ angular.module('palauteUiApp')
             $scope.myComment = {};
         };
 
+        // Used from views/feedback.html
         $scope.feedbackHasComments = function() {
             return $scope.feedback && $scope.feedback.comments && $scope.feedback.comments.length > 0;
         };
 
+        // Used from views/transfer.html
         $scope.transferFeedback = function() {
             
             // TODO: Store transfer request to backend
 
             $scope.transfer.feedbackid = $scope.feedback.id;
             $scope.transfer.userid = 1;
-
-            console.log($scope.transfer);
             
             $state.go('app.feedbackdetails');
 
             $scope.transfer = {};
         };
 
+        // Used from views/answer.html
         $scope.answerFeedback = function() {
 
             $scope.answer.feedbackid = $scope.feedback.id;
@@ -162,34 +172,30 @@ angular.module('palauteUiApp')
             $state.go('app.feedbackdetails.answer.select');
         };
 
+        // Used from views/answer-select.html
         $scope.sendAnswer = function() {
 
             // TODO: Store answer to backend
 
-            console.log("Send answer");
-            console.log($rootScope.answer);
             $rootScope.answer = {};
             $scope.answer = {};
             $state.go('app.feedbackdetails');
         };
 
+        // Used from views/answer-select.html
         $scope.sendIntermediateAnswer = function() {
 
             // TODO: Store intermediate answer to backend
 
-            console.log("Send intermediate answer");
-            console.log($rootScope.answer);
             $rootScope.answer = {};
             $scope.answer = {};
             $state.go('app.feedbackdetails');
         };
 
+        // Used from views/inform.html
         $scope.sendFeedbackInform = function() {
 
             // TODO: Use backend for feedback informing
-
-            console.log("Send feedback as info");
-            console.log($scope.inform);
 
             $scope.inform = {};
             $state.go('app.feedbackdetails');

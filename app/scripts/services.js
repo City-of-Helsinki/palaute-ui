@@ -1,5 +1,7 @@
 /*jshint strict: true*/
-'use strict';
+
+(function(){
+    "use strict";
 
 angular.module('palauteUiApp')
 	.constant("baseURL","http://localhost:1234/")
@@ -10,3 +12,4 @@ angular.module('palauteUiApp')
 	}])
 
 ;
+})();
