@@ -84,6 +84,8 @@ angular.module('palauteUiApp')
 	.controller('FeedbackDetailController', ['$scope', '$rootScope', '$stateParams', 'feedbackFactory', '$state', 
       function($scope, $rootScope, $stateParams, feedbackFactory, $state){
 
+        console.log("FeedbackDetailController");
+
         $scope.myComment = {};
         $scope.transfer = {};
         $scope.answer = {};
