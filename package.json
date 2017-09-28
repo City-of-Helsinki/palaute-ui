@@ -20,15 +20,19 @@
     "gulp-uglify": "^2.0.0",
     "gulp-usemin": "^0.3.24",
     "jshint": "^2.9.3",
-    "jshint-stylish": "^2.2.1"
+    "jshint-stylish": "^2.2.1",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
-  "jshintConfig" : {
-    "node" : true
-  }
+  "jshintConfig": {
+    "node": true
+  },
+  "snyk": true
 }
